@@ -2,6 +2,7 @@ import { Button, Form } from 'react-bootstrap';
 import {  useRef, useState } from 'react';
 import './index.css';
 import axios from 'axios';
+import NavBar from './Navigation';
 
 const API_URL = 'https://api.unsplash.com/search/photos';
 const API_KEY  = 'Z9fx-4KtPqXKm1VMvYENWMgkT5u4H-YSgcW482sIfNU';
@@ -44,6 +45,8 @@ function App() {
   console.log('page',page)
 
   return (
+    <>
+    <NavBar />
     <div className='container'>
       <h1 className='title'>Dynamic Search</h1>
       <div className='search-section'>
@@ -79,6 +82,7 @@ function App() {
          {page < totalPages && <Button onClick={()=>setPage(Number(page)+1)}>Next</Button>}
       </div>
     </div>  
+    </>
   );
 }
 

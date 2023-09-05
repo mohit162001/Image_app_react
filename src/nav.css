@@ -1,0 +1,36 @@
+
+.topnav {
+    background-color: #7676d7;
+    overflow: hidden;
+  }
+  
+
+  .topnav a,p{
+    float:right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .lbutton{
+    border: none;
+    background: #7676d7;
+  }
+  
+  .topnav a:hover {
+    color: black;
+  }
+
+  .topnav .lbutton:hover{
+    color: #ddd;
+  }
+
+  .heading{
+    display: inline-flex;
+    color: #ddd;
+    padding: 10px 20px;
+  }
+  
+  
