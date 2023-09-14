@@ -19,8 +19,6 @@
     color: var(--primary-color);
   }
   
-  /* common css starts */
-  
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -58,11 +56,7 @@
     color: #ff0000;
     text-align: center;
   }
-  
-  /* common css ends */
-  
-  /* search section starts */
-  
+
   .search-section {
     display: flex;
     justify-content: center;
@@ -78,11 +72,7 @@
   .search-section .search-btn {
     margin-left: var(--default-spacing);
   }
-  
-  /* search section ends */
-  
-  /* filters section starts */
-  
+   
   .filters {
     display: flex;
     justify-content: center;
@@ -100,9 +90,6 @@
     cursor: pointer;
   }
   
-  /* filters section ends */
-  
-  /* images section starts */
   
   .images {
     margin-top: var(--medium-margin);
@@ -124,12 +111,9 @@
   }
   
   .images .image:hover {
-    transform: translateY(-3px);
+    transform: translateY(-10px);
   }
   
-  /* images section ends */
-  
-  /* Responsive adjustments */
   @media (max-width: 768px) {
     .images {
       grid-template-columns: repeat(2, 1fr);

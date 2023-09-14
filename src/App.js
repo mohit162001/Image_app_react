@@ -1,5 +1,5 @@
 import { Button, Form } from 'react-bootstrap';
-import {  useRef, useState } from 'react';
+import {  useEffect, useRef, useState } from 'react';
 import './index.css';
 import axios from 'axios';
 import NavBar from './Navigation';
@@ -12,15 +12,19 @@ function App() {
   const [images,setImages]=useState([]);
   const [page,setPage]=useState([1]);
   const [totalPages,setTotalPages]=useState([0]);
-
+  
+  useEffect(()=>{
+      fetchImages();
+  },[page]);
   
   const fetchImages =async()=>{
     try{
       const {data} = await axios.get(
         `${API_URL}?query=${searchInput.current.value}
-        &page=1&per_page=${IMAGE_PER_PAGE}
+        &page=${page}&per_page=${IMAGE_PER_PAGE}
         &client_id=${API_KEY}`
       );
+      console.log('result',data)
       setImages(data.results);
       setTotalPages(data.total_pages);
 
@@ -77,10 +81,10 @@ function App() {
             )  ;
           })}
       </div>
-      {/* <div className='buttons'>
+      <div className='buttons'>
          {page > 1 && <Button onClick={()=>setPage(page-1)}>Previous</Button>}
          {page < totalPages && <Button onClick={()=>setPage(Number(page)+1)}>Next</Button>}
-      </div> */}
+      </div>
     </div>  
     </>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import './nav.css'
 import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const { loginWithRedirect, isAuthenticated,logout,user } = useAuth0();
