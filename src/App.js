@@ -13,7 +13,7 @@ function App() {
   const [page,setPage]=useState([1]);
   const [totalPages,setTotalPages]=useState([0]);
 
-
+  
   const fetchImages =async()=>{
     try{
       const {data} = await axios.get(
@@ -77,10 +77,10 @@ function App() {
             )  ;
           })}
       </div>
-      <div className='buttons'>
+      {/* <div className='buttons'>
          {page > 1 && <Button onClick={()=>setPage(page-1)}>Previous</Button>}
          {page < totalPages && <Button onClick={()=>setPage(Number(page)+1)}>Next</Button>}
-      </div>
+      </div> */}
     </div>  
     </>
   );

@@ -9,11 +9,11 @@ const NavBar = () => {
         <div class="topnav">
           <h4 className="heading">DYNAMIC SEARCH</h4>    
           <p>{isAuthenticated && <p>{user.name}</p>}{
-            isAuthenticated ? <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+            isAuthenticated ? <button onClick={() => logout({ logoutParams: { returnTo: "http://localhost:3000/" } })}>
             Log Out
           </button> :<button className="lbutton" onClick={() => loginWithRedirect()}>Log In</button>
           }</p>
-          <a href="">About</a>
+          
           <a href="">Home</a>
           
         </div>
